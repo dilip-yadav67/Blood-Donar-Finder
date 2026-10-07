@@ -1,0 +1,32 @@
+:root{--ink:#14181f;--mut:#5d6572;--bg:#f5f6f8;--card:#fff;--line:#dfe3e9;--red:#b3001b}
+@media (prefers-color-scheme:dark){:root{--ink:#eef0f3;--mut:#9aa3b0;--bg:#12151a;--card:#1b2027;--line:#2c333d;--red:#ff4d63}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",system-ui,sans-serif}
+main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+h1{margin:0;font-size:1.7rem;letter-spacing:-.02em;color:var(--red)}
+header p{margin:2px 0 18px;color:var(--mut)}
+h2{margin:0 0 4px;font-size:1.2rem}
+nav{display:flex;gap:8px;margin-bottom:14px}
+nav button{flex:1}
+nav .on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:14px;display:flex;flex-direction:column;gap:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:end}
+label{display:flex;flex-direction:column;gap:4px;font-size:.88rem;color:var(--mut)}
+label.check{flex-direction:row;align-items:center;gap:8px;color:var(--ink)}
+input,select,button,.acts a{font:inherit;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+button,.acts a{cursor:pointer;text-decoration:none;text-align:center}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.primary{background:var(--red);border-color:var(--red);color:#fff}
+.big{padding:13px;font-weight:600}
+.link{border:0;background:none;color:var(--mut);padding:4px;text-decoration:underline}
+.danger{color:var(--red)}
+.row{display:flex;justify-content:space-between}
+.or{text-align:center;color:var(--mut);font-size:.85rem}
+.muted{color:var(--mut);margin:0;font-size:.9rem}
+.err{color:var(--red);margin:0;font-weight:600}
+.donor{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:8px}
+.grp{flex:none;width:52px;height:52px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:700}
+.info{display:flex;flex-direction:column;flex:1;min-width:0}
+.info span{color:var(--mut);font-size:.88rem}
+.acts{display:flex;gap:6px}
+@media (max-width:420px){.donor{flex-wrap:wrap}.donor>button,.acts{width:100%}.acts>*{flex:1}}
